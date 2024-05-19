@@ -1,0 +1,72 @@
+/* set colors */
+
+$background: #fcffe0;
+$primary: #426973;
+$highlight: #850e35;
+// default white
+$white: hsl(221, 14%, 100%);
+
+/* override global sass variables */
+@use "bulma/sass/utilities" with (
+  /* not working !!! */ $family-primary: '"Original Garmond",serif',
+  // $family-primary: '"Nunito", sans-serif', ^^^ will show up with --bulma has text primary className
+  // primary is primary
+  /// info is highlight
+  $background: $background,
+  $scheme-main: $background,
+  $scheme-main-bis: $primary,
+  $scheme-main-ter: $highlight,
+  // above here isn't doing anything
+  $primary: $primary,
+  $link: $highlight
+);
+
+@forward "bulma/bulma";
+
+/* css variables override*/
+:root {
+  --bulma-body-background-color: #{$background};
+
+  // --bulma-body-background-color: #f5f4ce;
+  // get rid of scroll bar when not needed
+  // --bulma-body-family: $family-primary;
+  overflow-y: auto;
+}
+
+/* font */
+@font-face {
+  font-family: "Original Garamond";
+  src: url("/fonts/ogr.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.navbar-item {
+  color: $white !important;
+}
+.navbar-link {
+  color: $white;
+}
+
+// // Override Sass variables from the /form folder
+// @use "bulma/sass/form" with (
+//   $input-shadow: none
+// );
+
+// // Import the components you need
+// @forward "bulma/sass/base";
+// @forward "bulma/sass/components/card";
+// @forward "bulma/sass/components/modal";
+// @forward "bulma/sass/components/navbar";
+// @forward "bulma/sass/elements/button";
+// @forward "bulma/sass/elements/icon";
+// @forward "bulma/sass/elements/content";
+// @forward "bulma/sass/elements/notification";
+// @forward "bulma/sass/elements/progress";
+// @forward "bulma/sass/elements/tag";
+// @forward "bulma/sass/layout/footer";
+
+// // Import the themes so that all CSS variables have a value
+
+// // Import the Google Font
+@import url("https:; //fonts.googleapis.com/css?family=Nunito:400,700");
