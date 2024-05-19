@@ -2,6 +2,9 @@ import Link from "next/link";
 export default function InnerNavBar() {
   return (
     <div className="navbar-end">
+      <Link href="/about" className="navbar-item has-background-primary">
+        About
+      </Link>
       <Link href="/projects" className="navbar-item has-background-primary">
         Projects
       </Link>
@@ -31,9 +34,6 @@ export default function InnerNavBar() {
           </Link>
         </div>
       </div>
-      <Link href="/now" className="navbar-item has-background-primary">
-        Now
-      </Link>
       <Link href="/resume" className="navbar-item has-background-primary">
         Resume
       </Link>
