@@ -14,7 +14,7 @@ export default function InnerNavBar() {
         </Link>
         <div className="navbar-dropdown has-background-primary">
           <Link
-            href="/bolgs/henry"
+            href="/blogs/henry"
             className="navbar-item has-background-primary"
           >
             Henry's Blogs

@@ -2,6 +2,7 @@
 
 $background: #fcffe0;
 $primary: #426973;
+$brightprimary: #2f4c53;
 $highlight: #850e35;
 // default white
 $white: hsl(221, 14%, 100%);
@@ -20,7 +21,8 @@ $white: hsl(221, 14%, 100%);
   // above here isn't doing anything
   $primary: $primary,
   $link: $highlight,
-  $info: $background
+  $info: $background,
+  $success: $brightprimary
 );
 
 @forward "bulma/bulma";
@@ -29,6 +31,7 @@ $white: hsl(221, 14%, 100%);
 :root {
   --bulma-body-background-color: #{$background};
   --bulma-navbar-min-height: 400px;
+  --bulma-section-padding: 1rem 1rem !important;
   // --bulma-body-background-color: #f5f4ce;
   // get rid of scroll bar when not needed
   // --bulma-body-family: $family-primary;
@@ -60,8 +63,87 @@ body {
   flex: 1;
 }
 
+.image-float-right {
+  float: right; /* Aligns the image to the right */
+  margin-left: 20px; /* Adds space between the image and the text */
+  margin-right: 0px !important;
+  padding-right: 0px;
+}
+
 .my-footer {
   margin-bottom: 15px;
+}
+
+.my-section {
+  padding: 1rem 0rem;
+  display: flex;
+}
+
+.hero-body {
+  padding-left: 0rem;
+}
+
+.pageContainer {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+// .section {
+//   margin-left: 0px !important;
+//   margin-right: 0px !important;
+// }
+
+// margin-left: 10px;
+// margin-right: 10px;
+
+.img-container {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.meme-image {
+  width: 300px;
+}
+
+/* slim container */
+.slim-container {
+  width: 975px;
+}
+
+/* Custom CSS file */
+@media screen and (max-width: 1039px) {
+  /* Adjusts for devices smaller than 768px */
+  .slim-container {
+    width: 100%;
+    padding-left: 32px; /* Adds 10px padding to the left */
+    padding-right: 32px; /* Adds 10px padding to the right */
+  }
+}
+
+#henryface {
+  margin-right: 5rem;
+  // padding-top: 10px;
+}
+
+.blog-home-section {
+  padding-bottom: 1.5rem;
+}
+.blog-bio {
+  padding-bottom: 1rem;
+}
+.blog-snippet {
+  // width: 600px;
+  // height: 200px;
+  margin-bottom: 25px;
+}
+.blog-snippet-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
 }
 
 // // Override Sass variables from the /form folder
