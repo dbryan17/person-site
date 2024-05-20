@@ -6,6 +6,9 @@ $brightprimary: #2f4c53;
 $highlight: #850e35;
 // default white
 $white: hsl(221, 14%, 100%);
+// deafult text
+// grey - dark
+$text: hsl(221, 14%, 29%);
 
 /* override global sass variables */
 @use "bulma/sass/utilities" with (
@@ -22,7 +25,8 @@ $white: hsl(221, 14%, 100%);
   $primary: $primary,
   $link: $highlight,
   $info: $background,
-  $success: $brightprimary
+  $success: $brightprimary,
+  $text: $text
 );
 
 @forward "bulma/bulma";
@@ -61,6 +65,14 @@ body {
 
 .pageContainer {
   flex: 1;
+}
+
+.outline-link {
+  color: rgba($text, 0.7);
+}
+.outline-link:hover {
+  text-decoration: underline !important;
+  color: $highlight !important;
 }
 
 .image-float-right {
@@ -128,6 +140,12 @@ body {
   // padding-top: 10px;
 }
 
+#cody-face {
+  width: 200px;
+  height: 200px;
+  // margin-left: 20px;
+}
+
 .blog-home-section {
   padding-bottom: 1.5rem;
 }
@@ -154,25 +172,13 @@ body {
   background-color: darken($primary, 5%) !important;
 }
 
-// // Override Sass variables from the /form folder
-// @use "bulma/sass/form" with (
-//   $input-shadow: none
-// );
-
-// // Import the components you need
-// @forward "bulma/sass/base";
-// @forward "bulma/sass/components/card";
-// @forward "bulma/sass/components/modal";
-// @forward "bulma/sass/components/navbar";
-// @forward "bulma/sass/elements/button";
-// @forward "bulma/sass/elements/icon";
-// @forward "bulma/sass/elements/content";
-// @forward "bulma/sass/elements/notification";
-// @forward "bulma/sass/elements/progress";
-// @forward "bulma/sass/elements/tag";
-// @forward "bulma/sass/layout/footer";
-
-// // Import the themes so that all CSS variables have a value
+.homePageUpperCont {
+  padding-top: 3rem;
+  // display: flex;
+}
+.homePageInnerText {
+  padding-bottom: 1rem;
+}
 
 // // Import the Google Font
 @import url("https:; //fonts.googleapis.com/css?family=Nunito:400,700");
