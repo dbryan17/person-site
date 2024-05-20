@@ -146,6 +146,14 @@ body {
   margin-top: 60px;
 }
 
+.navbar-dropdown {
+  border-top: 0px !important;
+}
+
+.navbar-item-active {
+  background-color: darken($primary, 5%) !important;
+}
+
 // // Override Sass variables from the /form folder
 // @use "bulma/sass/form" with (
 //   $input-shadow: none
