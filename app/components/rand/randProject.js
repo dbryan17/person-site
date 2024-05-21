@@ -61,9 +61,11 @@ application, corresponding to over one million rows in one of the tables.
 import ProjectCard from "../projectCards/projectCard";
 import { useState, useEffect } from "react";
 export default function RandProjectCard() {
-  const [randProject, setRandProject] = useState(
-    projects[Math.floor(Math.random() * 3)]
-  );
+  const [randProject, setRandProject] = useState("");
+  useEffect(() => {
+    let rand = Math.floor(Math.random() * projects.length);
+    setRandProject(projects[rand]);
+  }, []);
 
   // okay, the whole reason I need useEffects in these random components is because
   // there is a static version pre rendered on the server before it runs in the clinet
@@ -75,9 +77,5 @@ export default function RandProjectCard() {
   console.log(randSize);
   const array = Array.from({ length: randSize }, (_, index) => index);
   console.log(array);
-  return (
-    <div>
-      <ProjectCard specs={randProject} />
-    </div>
-  );
+  return <div>{randProject ? <ProjectCard specs={randProject} /> : ""}</div>;
 }

@@ -33,3 +33,5 @@ export default function RandImage() {
     </figure>
   );
 }
+
+export const dynamic = "force-dynamic";
