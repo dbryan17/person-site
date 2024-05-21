@@ -1,5 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
+
+import Image from "next/image";
 const imgLocations = [
   "/pictures/me/one.JPG",
   "/pictures/me/two.JPG",
@@ -11,12 +13,14 @@ export default function RandImage() {
 
   useEffect(() => {
     let rand = Math.floor(Math.random() * imgLocations.length);
+    console.log(rand);
+
     setCurrentImage(imgLocations[rand]);
   }, []);
 
   return (
     <figure className="image image-float-right" id="cody-face">
-      <img src={currentImage} />
+      <Image src={currentImage} width={200} height={200} />
     </figure>
   );
 }
