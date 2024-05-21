@@ -47,7 +47,7 @@ export default function InnerNavBar() {
               (pathHas("henry") ? " navbar-item-active" : "")
             }
           >
-            Henry's Blogs
+            Henry&apos;s Blogs
           </Link>
         </div>
       </div>

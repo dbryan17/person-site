@@ -2,39 +2,22 @@
 import "./styles.scss";
 import "./page.css";
 
-import { useState, useEffect } from "react";
-const imgLocations = ["/one.JPG", "/two.JPG", "/three.jpeg"];
+import RandImage from "./components/rand/randImage";
+
 import ProjectCard from "./components/projectCards/projectCard";
 
 export default function Home() {
-  const getRandImage = () => {
-    return (
-      "/pictures/me" +
-      imgLocations[Math.floor(Math.random() * imgLocations.length)]
-    );
-  };
-  const [currImage, setCurrImage] = useState(getRandImage());
-  useEffect(() => {
-    const updateImage = () => {
-      setCurrImage(getRandImage());
-    };
-    window.addEventListener("pageShow", updateImage);
-    return () => window.removeEventListener("pageShow", updateImage);
-  }, []);
-
   return (
     <div className="slim-container pageContNonHero">
       <div className="page-chunk">
         <div>
           <div id="homeImageCont">
-            <figure className="image image-float-right" id="cody-face">
-              <img src={currImage}></img>
-            </figure>
+            <RandImage />
           </div>
 
           <div className="inner-page-chunk">
             <h1 className="title has-text-success is-size-4">
-              Hello, I'm Dakota
+              Hello, I&apos;m Dakota
             </h1>
             <div className="inner-page-chunk">
               An icoming PhD student at CU Boulder in the{" "}
@@ -75,7 +58,7 @@ export default function Home() {
       </div>
       <div className="page-chunk">
         <h1 className="title has-text-success is-size-3">Featured Blog</h1>
-        <h2 className="subtitle">Also at random</h2>
+        <h2 className="subtitle">Also random</h2>
       </div>
     </div>
   );
