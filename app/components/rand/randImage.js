@@ -20,7 +20,16 @@ export default function RandImage() {
 
   return (
     <figure className="image image-float-right" id="cody-face">
-      <Image src={currentImage} width={200} height={200} />
+      {currentImage ? (
+        <Image
+          src={currentImage}
+          width={200}
+          height={200}
+          alt="picture of me"
+        />
+      ) : (
+        ""
+      )}
     </figure>
   );
 }

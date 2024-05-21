@@ -3,6 +3,7 @@ import "./styles.scss";
 import "./page.css";
 
 import RandImage from "./components/rand/randImage";
+import RandProjectCard from "./components/rand/randProject";
 
 import ProjectCard from "./components/projectCards/projectCard";
 
@@ -54,7 +55,7 @@ export default function Home() {
       <div className="page-chunk">
         <h1 className="title has-text-success is-size-3">Featured Project</h1>
         <h2 className="subtitle">Picked at random</h2>
-        <ProjectCard />
+        <RandProjectCard />
       </div>
       <div className="page-chunk">
         <h1 className="title has-text-success is-size-3">Featured Blog</h1>
