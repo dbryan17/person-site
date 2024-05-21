@@ -125,6 +125,26 @@ body {
   width: 975px;
 }
 
+.cards {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.my-card {
+  padding: 1rem;
+  background-color: darken($background, 3%) !important;
+  width: 800px;
+  // border: 1px solid $text;
+}
+
+@media screen and (max-width: 800px) {
+  /* Adjusts for devices smaller than 768px */
+  .super-slim-container {
+    width: 100%;
+  }
+}
+
 /* Custom CSS file */
 @media screen and (max-width: 1039px) {
   /* Adjusts for devices smaller than 768px */
@@ -146,10 +166,10 @@ body {
   // margin-left: 20px;
 }
 
-.blog-home-section {
+.page-chunk {
   padding-bottom: 1.5rem;
 }
-.blog-bio {
+.inner-page-chunk {
   padding-bottom: 1rem;
 }
 .blog-snippet {
@@ -172,12 +192,15 @@ body {
   background-color: darken($primary, 5%) !important;
 }
 
-.homePageUpperCont {
+.pageContNonHero {
   padding-top: 3rem;
   // display: flex;
 }
-.homePageInnerText {
-  padding-bottom: 1rem;
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 // // Import the Google Font

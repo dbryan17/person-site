@@ -1,7 +1,7 @@
 export default function HenryHome() {
   return (
     <div className="slim-container">
-      <section className="blog-home-section">
+      <section className="page-chunk">
         <section className="hero">
           <div className="hero-body">
             <p className="title has-text-success is-size-2">
@@ -11,7 +11,7 @@ export default function HenryHome() {
           </div>
         </section>
 
-        <div className="blog-bio">
+        <div className="inner-page-chunk">
           <figure className="image is-128x128 image-float-right" id="henryface">
             <img src="/pictures/henry/home/henry.jpeg" />
           </figure>
@@ -31,7 +31,7 @@ export default function HenryHome() {
         <hr className="has-background-primary" />
       </section>
 
-      <section className="blog-home-section">
+      <section className="page-chunk">
         <h1 className="title has-text-success is-size-3">The Junk Drawer</h1>
         <h2 className="subtitle">Blogs about something</h2>
         <div className="blog-snippet-container">
