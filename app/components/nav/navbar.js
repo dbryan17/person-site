@@ -11,7 +11,6 @@ TODO
 export default function Navbar() {
   const [burgerIsActive, setBurgerIsActive] = useState(false);
 
-  console.log(burgerIsActive);
   return (
     <nav className="navbar has-background-primary">
       <div className="navbar-brand">

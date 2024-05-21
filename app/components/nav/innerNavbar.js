@@ -3,7 +3,6 @@ import { usePathname } from "next/navigation";
 
 export default function InnerNavBar() {
   const pathname = usePathname();
-  console.log(pathname);
 
   const pathHas = (str) => {
     return pathname.includes(str);

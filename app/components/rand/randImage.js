@@ -11,7 +11,6 @@ export default function RandImage() {
 
   useEffect(() => {
     let rand = Math.floor(Math.random() * imgLocations.length);
-    console.log(rand);
     setCurrentImage(imgLocations[rand]);
   }, []);
 
