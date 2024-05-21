@@ -77,7 +77,11 @@ export default function RandProjectCard() {
   console.log(randSize);
   const array = Array.from({ length: randSize }, (_, index) => index);
   console.log(array);
-  return <div>{randProject ? <ProjectCard specs={randProject} /> : ""}</div>;
+  return (
+    <div>
+      <ProjectCard specs={randProject} />
+    </div>
+  );
 }
 
 export const dynamic = "force-dynamic";
