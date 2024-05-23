@@ -6,7 +6,33 @@ export default function FvProject() {
         <h1 className="title has-text-success is-size-5">Fractal Voyager</h1>
         <h2 className="subtitle is-size-6 project-subtitle">
           CS Honors Thesis, advised by Kevin Angstadt
+          <div className="project-btn-container">
+            <a
+              className="button is-small project-btn"
+              href="https://fractalvoyager.github.io/"
+              target="_blank"
+            >
+              Website
+            </a>
+            <a
+              className="button is-small project-btn"
+              href="files/fv/poster.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              See the poster
+            </a>
+            <a
+              className="button is-small project-btn"
+              href="files/fv/paper.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              See the paper
+            </a>
+          </div>
         </h2>
+
         <p className="inner-page-chunk">
           Fractal Voyager is a fractal generating web application to assist in{" "}
           <a
@@ -64,7 +90,7 @@ export default function FvProject() {
               iteration of the function.{"\n"}
             </p>
           }
-          foldText={"Learn more about the math"}
+          foldText={"Learn about the math"}
         />
 
         <Fold
@@ -89,16 +115,6 @@ export default function FvProject() {
           }
           foldText={"See more about the app"}
         />
-
-        <a href="files/fv/poster.pdf" target="_blank" rel="noopener noreferrer">
-          See the poster
-        </a>
-        <a href="files/fv/paper.pdf" target="_blank" rel="noopener noreferrer">
-          See the paper
-        </a>
-        <a href="https://fractalvoyager.github.io/" target="_blank">
-          Website
-        </a>
       </section>
     </>
   );

@@ -211,6 +211,25 @@ body {
   justify-content: center;
 }
 
+.project-btn {
+  border: 1px solid !important;
+  // color: hsl(0, 0%, 4%) !important;
+  // color: $text !important;
+  background-color: $background;
+
+  border-color: $text !important;
+  margin-right: 0.5rem !important;
+}
+
+.project-btn:hover {
+  background-color: $highlight;
+  color: hsl(0, 0%, 96%);
+}
+
+.project-btn-container {
+  padding-top: 0.5rem;
+}
+
 // // Import the Google Font
 // @import url("https:; //fonts.googleapis.com/css?family=Nunito:400,700");
 
