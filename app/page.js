@@ -55,7 +55,9 @@ export default function Home() {
       <div className="page-chunk">
         <h1 className="title has-text-success is-size-3">Featured Project</h1>
         <h2 className="subtitle">Picked at random</h2>
+        {/* <div className="super-slim-container cards"> */}
         <RandProjectCard />
+        {/* </div> */}
       </div>
       <div className="page-chunk">
         <h1 className="title has-text-success is-size-3">Featured Blog</h1>

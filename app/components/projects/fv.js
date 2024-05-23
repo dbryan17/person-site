@@ -2,7 +2,7 @@ import Fold from "../folds/fold";
 export default function FvProject() {
   return (
     <>
-      <section className="pageChunk">
+      <section className="pageChunk my-card">
         <h1 className="title has-text-success is-size-5">Fractal Voyager</h1>
         <h2 className="subtitle is-size-6 project-subtitle">
           CS Honors Thesis, advised by Kevin Angstadt
