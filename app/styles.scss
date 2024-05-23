@@ -70,6 +70,10 @@ body {
 .outline-link {
   color: rgba($text, 0.7);
 }
+.project-subtitle {
+  color: rgba($text, 0.9);
+}
+
 .outline-link:hover {
   text-decoration: underline !important;
   color: $highlight !important;

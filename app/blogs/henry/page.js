@@ -48,6 +48,7 @@ export default function HenryHome() {
         </div>
       </section>
       <div className="img-container">
+        {/* CHANGE TO <IMAGE></IMAGE> */}
         <figure className="meme-image" id="simpsons">
           <img src="/pictures/henry/home/simpsons.jpeg" />
         </figure>
