@@ -142,6 +142,10 @@ body {
   // border: 1px solid $text;
 }
 
+.super-slim-container {
+  width: 800px;
+}
+
 @media screen and (max-width: 800px) {
   /* Adjusts for devices smaller than 768px */
   .super-slim-container {
