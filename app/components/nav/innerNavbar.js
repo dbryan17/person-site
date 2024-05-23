@@ -73,13 +73,13 @@ export default function InnerNavBar() {
         </div>
       </div>
       <Link
-        href="/resume"
+        href="/cv"
         className={
           "navbar-item has-background-primary" +
-          (pathHas("resume") ? " navbar-item-active" : "")
+          (pathHas("cv") ? " navbar-item-active" : "")
         }
       >
-        Resume
+        CV
       </Link>
     </>
   );
