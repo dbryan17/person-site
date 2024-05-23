@@ -60,7 +60,9 @@ $text: hsl(221, 14%, 29%);
 body {
   display: flex;
   flex-direction: column;
+  // changed this from min-height: 100vh for the iframe. Make sure it still works!!!!
   height: 100vh;
+  // min-height: 100vh;
 }
 
 .pageContainer {
@@ -68,10 +70,6 @@ body {
   display: flex;
   align-items: center;
   flex: 1;
-}
-
-.pageContainer {
-  // height: 100vh;
 }
 
 .outline-link {
@@ -234,6 +232,11 @@ body {
 .iframeCont {
   width: 100%;
   height: 100%;
+}
+.iframebelowcont {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
 }
 
 // // Import the Google Font
