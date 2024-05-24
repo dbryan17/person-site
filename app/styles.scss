@@ -135,10 +135,13 @@ body {
 }
 
 .my-card {
-  padding: 1rem;
-  background-color: darken($background, 3%) !important;
+  // background-color: darken($background, 3%) !important;
   // width: 800px;
   // border: 1px solid $text;
+  padding: 1rem;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+
+  // border: 1px black solid;
 }
 
 .super-slim-container {
