@@ -1,38 +1,25 @@
 "use client";
 import { useState } from "react";
-export default function Fold({ foldContent, foldText }) {
+export default function Fold({ foldContent, title, isInner }) {
   const [foldOpen, setFoldOpen] = useState(false);
+
+  // if it is an inner fold, we need an additional spacer above because the content of the previous includes this one, so we are missing spacing
+  // also we already have the space from the previous one at the bottom, so to make up for the additonal we need to remove the other inners
   return (
     <>
+      {isInner ? <div className="inner-page-chunk"></div> : ""}
       {foldOpen ? (
         <>
           <a className="outline-link" onClick={() => setFoldOpen(false)}>
             Hide &uarr;
           </a>
-          {foldContent}
-
-          {/* <p className="inner-page-chunk">
-            Fractal Voyager provides an innovative application of{" "}
-            <a href="https://webassembly.org/" target="_blank">
-              WebAssembly
-            </a>
-            . A source-to-source compiler translates custom scripts to C++,
-            which can generate an array representation of the complex plane with
-            color values. This compiler is compiled to WebAssembly allowing
-            scripts to be enetered and compiled on the web. Then, the C++ that
-            was generated is compiled to WebAssembly. This step is particularly
-            tricky, and uses the core functionality of an{" "}
-            <a href="https://github.com/jprendes/emception" target="_blank">
-              in-broswer C++ code editor
-            </a>
-            . Finally, the WebAssembly is run on the web to generate fractals.
-          </p> */}
+          <div className={isInner ? "" : "inner-page-chunk"}>{foldContent}</div>
         </>
       ) : (
         <>
-          <div className="inner-page-chunk">
+          <div className={isInner ? "" : "inner-page-chunk"}>
             <a className="outline-link" onClick={() => setFoldOpen(true)}>
-              {foldText} &darr;
+              {title} &darr;
             </a>
           </div>
         </>

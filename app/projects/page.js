@@ -1,10 +1,6 @@
-import FvProject from "../components/projects/fv";
 import { projects } from "../data/projects/projects";
 import Project from "../components/projects/general";
 export default function Projects() {
-  // const [wasmFoldOpen, setWasmFoldOpen] = useState(false);
-  // const [mathFoldOpen, setMathFoldOpen] = useState(false);
-  // const [appFoldOpen, setAppFoldOpen] = useState(false);
   return (
     <div className="slim-container">
       <section className="pageChunk">
@@ -20,7 +16,6 @@ export default function Projects() {
       {projects.map((project) => (
         <Project specs={project} key={project.title} />
       ))}
-      <FvProject />
     </div>
   );
 }

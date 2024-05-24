@@ -5,17 +5,30 @@
 %%n - newline
 
 NOTE - tabbing down with `s causes \n
-NOTE - new lines just make spaces by default, so making my own newline
+NOTE - new lines just make spaces by default, so making my own
 */
 
 const FractalVoyager = {
   title: `Fractal Voyager`,
   subtitle: `CS Honors Thesis, advised by Kevin Angstadt`,
   buttons: [
-    "https://fractalvoyager.github.io/",
-    "https://github.com/FractalVoyager",
-    "files/fv/poster.pdf",
-    "files/fv/paper.pdf",
+    {
+      link: "https://fractalvoyager.github.io/",
+
+      display: "Website",
+    },
+    {
+      link: "https://github.com/FractalVoyager",
+      display: "Source Code",
+    },
+    {
+      link: "files/fv/poster.pdf",
+      display: "Poster",
+    },
+    {
+      link: "files/fv/paper.pdf",
+      display: "Paper",
+    },
   ],
   content: `
   Fractal Voyager is a fractal generating web application to assist
@@ -28,13 +41,13 @@ const FractalVoyager = {
   `,
   folds: [
     {
-      isFoldInFold: true,
+      isFoldInFold: false,
       title: `Learn why Fractal Voyager is fast (WebAssembly)`,
       content: `
       Fractal Voyager provides an innovative application of %%a{https://webassembly.org/[WebAssembly]} 
       . A source-to-source compiler translates custom scripts to C++,
       which can generate an array representation of the complex plane
-      with color %%b{values}. This compiler is compiled to WebAssembly
+      with color values. This compiler is compiled to WebAssembly
       allowing scripts to be enetered and compiled on the web. Then, the
       C++ that was generated is compiled to WebAssembly. This step is
       particularly tricky, and uses the core functionality of an 
@@ -45,7 +58,17 @@ const FractalVoyager = {
     {
       isFoldInFold: true,
       title: `Learn about the math`,
-      content: ``,
+      content: `
+      The language and application supports paramter and dynamical plane fractals, 
+      along with point orbit visualizations. The parameter plane is the complex plane 
+      when a function is iterated until a condition is met with respect to a fixed point. 
+      For example, z = z^2+c. It includes the paramter, c*, which changes with respect 
+      to the passed in point across the complex plane. The dynamical plane is the complex 
+      plane when a function is iterated until a condition is met with respect to a 
+      variable point, z, that changes with respect to the passed in point across the 
+      complex plane. For example, z = z^2 − 0.79 + 0.15i. A complex number’s orbit 
+      for a particular dynamical system is the value of the number after each iteration 
+      of the function.`,
       innerFold: {
         isFoldInFold: false,
         title: `See more about the app`,
