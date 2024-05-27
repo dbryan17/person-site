@@ -1,9 +1,12 @@
 /* set colors */
 
-$background: #fcffe0;
+$background: #f0e8d9;
+// $background: rgb(251, 245, 225);
 $primary: #426973;
 $brightprimary: #2f4c53;
 $highlight: #850e35;
+//$cardcolor: #fcffe0;
+$cardcolor: hsl(60, 50%, 97%);
 // default white
 $white: hsl(221, 14%, 100%);
 // deafult text
@@ -135,7 +138,7 @@ body {
 }
 
 .my-card {
-  // background-color: darken($background, 3%) !important;
+  background-color: $cardcolor !important;
   // width: 800px;
   // border: 1px solid $text;
   padding: 1rem;
@@ -217,7 +220,8 @@ body {
   border: 1px solid !important;
   // color: hsl(0, 0%, 4%) !important;
   // color: $text !important;
-  background-color: $background;
+  background-color: $primary;
+  color: white !important;
 
   border-color: $text !important;
   margin-right: 0.5rem !important;
@@ -225,7 +229,9 @@ body {
 
 .project-btn:hover {
   background-color: $highlight;
-  color: hsl(0, 0%, 96%);
+  // color: hsl(0, 0%, 96%);
+
+  // color: $text !important;
 }
 
 .project-btn-container {
