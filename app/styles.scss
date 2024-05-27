@@ -8,9 +8,9 @@ $primary: #426973;
 $brightprimary: #2f4c53;
 $highlight: #850e35;
 //$cardcolor: #fcffe0;
-// $cardcolor: hsl(60, 30%, 80%);
+// $cardcolor: hsl(60, 60%, 98%);
 
-// $cardcolor: hsl(0, 0%, 86%);
+// $cardcolor: hsl(0, 0%, 90%);
 // default white
 $white: hsl(221, 14%, 100%);
 // deafult text
@@ -143,7 +143,7 @@ body {
 
 .my-card {
   // background-color: $cardcolor !important;
-  background-color: lighten($background, 3%);
+  background-color: lighten($background, 4%);
   // width: 800px;
   // border: 1px solid $text;
   padding: 1rem;
