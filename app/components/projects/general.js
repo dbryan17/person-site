@@ -20,7 +20,7 @@ export default function Project({ specs }) {
   };
   return (
     <>
-      <section className="page-chunk my-card">
+      <section className="my-card">
         <h1 className="title has-text-success is-size-5">{specs.title}</h1>
         <h2 className="subtitle is-size-6 project-subtitle">
           {specs.subtitle}

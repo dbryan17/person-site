@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export default function InnerNavBar() {
+export default function InnerNavBar({ setBurgerNotActive }) {
   const pathname = usePathname();
 
   const pathHas = (str) => {
@@ -16,6 +16,7 @@ export default function InnerNavBar() {
           "navbar-item has-background-primary" +
           (pathHas("about") ? " navbar-item-active" : "")
         }
+        onClick={setBurgerNotActive}
       >
         About
       </Link>
@@ -25,6 +26,7 @@ export default function InnerNavBar() {
           "navbar-item has-background-primary" +
           (pathHas("projects") ? " navbar-item-active" : "")
         }
+        onClick={setBurgerNotActive}
       >
         Projects
       </Link>
@@ -35,6 +37,7 @@ export default function InnerNavBar() {
             (pathHas("blogs") ? " navbar-item-active" : "")
           }
           href="/blogs"
+          onClick={setBurgerNotActive}
         >
           Blogs
         </Link>
@@ -45,6 +48,7 @@ export default function InnerNavBar() {
               "navbar-item has-background-primary" +
               (pathHas("henry") ? " navbar-item-active" : "")
             }
+            onClick={setBurgerNotActive}
           >
             Henry&apos;s Blogs
           </Link>
@@ -57,6 +61,7 @@ export default function InnerNavBar() {
             (pathHas("tools") ? " navbar-item-active" : "")
           }
           href="/tools"
+          onClick={setBurgerNotActive}
         >
           Small Tools
         </Link>
@@ -67,6 +72,7 @@ export default function InnerNavBar() {
               "navbar-item has-background-primary" +
               (pathHas("counter") ? " navbar-item-active" : "")
             }
+            onClick={setBurgerNotActive}
           >
             Counter
           </Link>
@@ -78,6 +84,7 @@ export default function InnerNavBar() {
           "navbar-item has-background-primary" +
           (pathHas("cv") ? " navbar-item-active" : "")
         }
+        onClick={setBurgerNotActive}
       >
         CV
       </Link>

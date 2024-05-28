@@ -14,7 +14,11 @@ export default function Navbar() {
   return (
     <nav className="navbar has-background-primary">
       <div className="navbar-brand">
-        <Link href="/" className="navbar-item has-background-primary">
+        <Link
+          href="/"
+          className="navbar-item has-background-primary"
+          onClick={() => setBurgerIsActive(false)}
+        >
           Dakota Bryan
         </Link>
         <div
@@ -37,7 +41,7 @@ export default function Navbar() {
       >
         <div className="navbar-start"></div>
         <div className="navbar-end has-background-primary">
-          <InnerNavBar />
+          <InnerNavBar setBurgerNotActive={() => setBurgerIsActive(false)} />
         </div>
       </div>
     </nav>
