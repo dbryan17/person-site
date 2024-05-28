@@ -21,8 +21,10 @@ export default function BlogPage({ params }) {
       <section className="page-chunk">
         <section className="hero">
           <div className="hero-body">
-            <p className="title has-text-success is-size-2">{blog.title}</p>
-            <p className="subtitle">{blog.date}</p>
+            <div className="title has-text-success is-size-2">
+              {parse(blog.title, true)}
+            </div>
+            <div className="subtitle">{parse(blog.date, true)}</div>
           </div>
         </section>
         <div>{parse(blog.content)}</div>
