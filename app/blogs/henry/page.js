@@ -13,7 +13,7 @@ export default function HenryHome() {
 
         <div className="inner-page-chunk">
           <figure className="image is-128x128 image-float-right" id="henryface">
-            <img src="/pictures/henry/home/henry.jpeg" />
+            <img src="/pictures/henry/home/henrytwo.jpeg" />
           </figure>
           <p className="content">
             This is my super cool column here on dakota.quest. A little
