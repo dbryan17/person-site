@@ -1,7 +1,18 @@
 import { blogs } from "@/app/data/blogs/henryBlogs";
 import { parse } from "@/app/utils/parser/parser";
+import Link from "next/link";
 
 export default function BlogPage({ params }) {
+  if (!blogs[params.id] || !blogs[params.id].content) {
+    return (
+      <div className="slim-container pageContainer">
+        <h2>
+          That&apos;s not right,{" "}
+          <Link href="/blogs/henry">return to Henry's home page</Link>?
+        </h2>
+      </div>
+    );
+  }
   const blog = blogs[params.id];
 
   // title, author, date, content
