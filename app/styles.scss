@@ -8,14 +8,16 @@ $primary: #426973;
 $brightprimary: #2f4c53;
 $highlight: #850e35;
 //$cardcolor: #fcffe0;
-// $cardcolor: hsl(60, 60%, 98%);
+// $cardcolor: hsl(54, 30%, 94%);
+$cardcolor: rgb(232, 225, 202);
 
 // $cardcolor: hsl(0, 0%, 90%);
 // default white
 $white: hsl(221, 14%, 100%);
 // deafult text
 // grey - dark
-$text: hsl(221, 14%, 29%);
+$text: hsl(0, 0%, 29%);
+// $darktext:
 
 /* override global sass variables */
 @use "bulma/sass/utilities" with (
@@ -142,12 +144,13 @@ body {
 }
 
 .my-card {
-  // background-color: $cardcolor !important;
-  background-color: lighten($background, 4%);
+  background-color: $cardcolor !important;
+  // background-color: lighten($background, 4%);
   // width: 800px;
   // border: 1px solid $text;
   padding: 1rem;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+  color: hsl(0, 0%, 7%);
 
   // border: 1px black solid;
 }

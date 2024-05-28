@@ -3,7 +3,7 @@ import Project from "../components/projects/general";
 export default function Projects() {
   return (
     <div className="slim-container">
-      <section className="pageChunk">
+      <section className="page-chunk">
         <section className="hero">
           <div className="hero-body">
             <p className="title has-text-success is-size-2">Projects</p>
