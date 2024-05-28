@@ -8,7 +8,7 @@ export default function BlogPage({ params }) {
       <div className="slim-container pageContainer">
         <h2>
           That&apos;s not right,{" "}
-          <Link href="/blogs/henry">return to Henry's home page</Link>?
+          <Link href="/blogs/henry">return to Henry&apos;s home page</Link>?
         </h2>
       </div>
     );
