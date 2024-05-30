@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { blogs } from "@/app/data/blogs/henryBlogs";
+
 export default function HenryHome() {
   return (
     <div className="slim-container">
@@ -34,17 +37,18 @@ export default function HenryHome() {
       <section className="page-chunk">
         <h1 className="title has-text-success is-size-3">The Junk Drawer</h1>
         <h2 className="subtitle">Blogs about something</h2>
-        <div className="blog-snippet-container">
-          <div className="blog-snippet has-background-link"></div>
-          <div className="blog-snippet has-background-link"></div>
-
-          <div className="blog-snippet has-background-link"></div>
-
-          <div className="blog-snippet has-background-link"></div>
-
-          <div className="blog-snippet has-background-link"></div>
-
-          <div className="blog-snippet has-background-link"></div>
+        <div>
+          {Object.entries(blogs).map((kvPair) => (
+            <div className="inner-page-chunk">
+              <Link
+                className="blog-link is-size-5"
+                href={"./henry/" + kvPair[0]}
+              >
+                {kvPair[1].title}
+              </Link>
+              <p className="blog-link-date">{kvPair[1].date}</p>
+            </div>
+          ))}
         </div>
       </section>
       <div className="img-container">
