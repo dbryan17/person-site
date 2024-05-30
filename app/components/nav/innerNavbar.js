@@ -1,5 +1,7 @@
+"use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 export default function InnerNavBar({ setBurgerNotActive }) {
   const pathname = usePathname();
@@ -8,6 +10,10 @@ export default function InnerNavBar({ setBurgerNotActive }) {
     return pathname.includes(str);
   };
 
+  const [blogsDropdownOpen, setBlogsDropdownOpen] = useState(false);
+  const [smallToolsDropdownOpen, setSmallToolsDropdownOpen] = useState(false);
+
+  console.log(blogsDropdownOpen);
   return (
     <>
       <Link
@@ -30,14 +36,22 @@ export default function InnerNavBar({ setBurgerNotActive }) {
       >
         Projects
       </Link>
-      <div className="navbar-item has-dropdown is-hoverable has-background-primary">
+      <div
+        className={
+          "navbar-item has-dropdown is-hoverable has-background-primary" +
+          (blogsDropdownOpen ? " is-active" : "")
+        }
+      >
         <Link
           className={
             "navbar-link has-background-primary is-arrowless" +
             (pathHas("blogs") ? " navbar-item-active" : "")
           }
           href="/blogs"
-          onClick={setBurgerNotActive}
+          onClick={() => {
+            setBurgerNotActive();
+            setBlogsDropdownOpen(false);
+          }}
         >
           Blogs
         </Link>

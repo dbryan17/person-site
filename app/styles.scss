@@ -237,6 +237,15 @@ body {
   margin-top: 0.5rem;
 }
 
+@media screen and (min-width: 1024px) {
+  .navbar-item.is-hoverable:hover .navbar-dropdown {
+    display: block !important;
+  }
+  .navbar-item.is-hoverable:focus-within .navbar-dropdown {
+    display: none;
+  }
+}
+
 .project-btn:hover {
   background-color: $highlight;
   // color: hsl(0, 0%, 96%);
