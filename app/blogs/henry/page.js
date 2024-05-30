@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { blogs } from "@/app/data/blogs/henryBlogs";
 import Disclaimer from "@/app/components/disclaimer/disclaimer";
+import Image from "next/image";
 
 export default function HenryHome() {
   return (
@@ -17,7 +18,14 @@ export default function HenryHome() {
 
         <div className="inner-page-chunk">
           <figure className="image is-128x128 image-float-right" id="henryface">
-            <img src="/pictures/henry/home/henrytwo.jpeg" />
+            <Image
+              src="/pictures/henry/home/henrytwo.jpeg"
+              width={200}
+              height={200}
+              alt="picture of henry"
+            />
+            {/* this one is slightly better quality */}
+            {/* <img src="/pictures/henry/home/henrytwo.jpeg" /> */}
           </figure>
           <p className="content">
             This is my super cool column here on dakota.quest. A little
@@ -60,10 +68,20 @@ export default function HenryHome() {
       <div className="img-container">
         {/* CHANGE TO <IMAGE></IMAGE> */}
         <figure className="meme-image" id="simpsons">
-          <img src="/pictures/henry/home/simpsons.jpeg" />
+          <Image
+            src="/pictures/henry/home/simpsons.jpeg"
+            width={400}
+            height={400}
+            alt="simpsons meme"
+          />
         </figure>
         <figure className="meme-image" id="mets">
-          <img src="/pictures/henry/home/mets.jpeg" />
+          <Image
+            src="/pictures/henry/home/mets.jpeg"
+            width={400}
+            height={400}
+            alt="the mets"
+          />
         </figure>
       </div>
     </div>

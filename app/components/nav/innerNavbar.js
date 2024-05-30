@@ -13,7 +13,6 @@ export default function InnerNavBar({ setBurgerNotActive }) {
   const [blogsDropdownOpen, setBlogsDropdownOpen] = useState(false);
   const [smallToolsDropdownOpen, setSmallToolsDropdownOpen] = useState(false);
 
-  console.log(blogsDropdownOpen);
   return (
     <>
       <Link

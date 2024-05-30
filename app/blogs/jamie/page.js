@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { blogs } from "@/app/data/blogs/jamieBlogs";
 import Disclaimer from "@/app/components/disclaimer/disclaimer";
-import { parse } from "@/app/utils/parser/parser";
-
+import Image from "next/image";
 export default function HenryHome() {
   return (
     <div className="slim-container">
@@ -16,7 +15,12 @@ export default function HenryHome() {
 
         <div className="inner-page-chunk">
           <figure className="image is-128x128 image-float-right" id="henryface">
-            <img src="/pictures/jamie/home/jamie.jpeg" />
+            <Image
+              src="/pictures/jamie/home/jamie.jpeg"
+              width={200}
+              height={200}
+              alt="picture of jamie"
+            />
           </figure>
           <p className="content">
             Hello my name is Jamie and I am very very excited to have a place
