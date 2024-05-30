@@ -3,6 +3,7 @@
 %%b{} - for bold text
 %%a{link[display]} - for links
 %%n - newline
+%%i{} - italics
 */
 
 /*
@@ -11,7 +12,7 @@ turns \ns to array of divs with inner-page-chunk className
 const parse = (rawText, hasNoClassName) => {
   return rawText.split("%%n").map((content, idx) => (
     <p key={idx} className={hasNoClassName ? "" : "inner-page-chunk"}>
-      {parseLinks(parseBolds(content))}
+      {parseLinks(parseItalics(parseBolds(content)))}
     </p>
   ));
 };
@@ -38,6 +39,28 @@ const parseLinks = (rawText) => {
         );
         // first element is regular text, third is regular text after bold on same line
       } else if (idx % 3 === 0) {
+        return part;
+      }
+    });
+  });
+};
+
+// not first one
+// turns %%i{} into italics
+const parseItalics = (rawText) => {
+  const regex = /%%i{([^{}]*)}/g;
+  // map the array to make more elements for links
+  return rawText.map((text, idx) => {
+    // if it already an element, like bold, just return
+    if (typeof text !== "string") {
+      return text;
+    }
+    // if it is a string, parse links
+    return text.split(regex).map((part, i) => {
+      // second element is link, third is display
+      if (i % 2 === 1) {
+        return <em key={idx}>{part}</em>;
+      } else {
         return part;
       }
     });
