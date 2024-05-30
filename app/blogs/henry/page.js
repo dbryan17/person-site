@@ -38,17 +38,19 @@ export default function HenryHome() {
         <h1 className="title has-text-success is-size-3">The Junk Drawer</h1>
         <h2 className="subtitle">Blogs about something</h2>
         <div>
-          {Object.entries(blogs).map((kvPair) => (
-            <div className="inner-page-chunk" key={kvPair[0]}>
-              <Link
-                className="blog-link is-size-5"
-                href={"./henry/" + kvPair[0]}
-              >
-                {kvPair[1].title}
-              </Link>
-              <p className="blog-link-date">{kvPair[1].date}</p>
-            </div>
-          ))}
+          {Object.entries(blogs)
+            .reverse()
+            .map((kvPair) => (
+              <div className="inner-page-chunk" key={kvPair[0]}>
+                <Link
+                  className="blog-link is-size-5"
+                  href={"./henry/" + kvPair[0]}
+                >
+                  {kvPair[1].title}
+                </Link>
+                <p className="blog-link-date">{kvPair[1].date}</p>
+              </div>
+            ))}
         </div>
       </section>
       <div className="img-container">
