@@ -66,6 +66,16 @@ export default function InnerNavBar({ setBurgerNotActive }) {
           >
             Henry&apos;s Blogs
           </Link>
+          <Link
+            href="/blogs/jamie"
+            className={
+              "navbar-item has-background-primary" +
+              (pathHas("jamie") ? " navbar-item-active" : "")
+            }
+            onClick={setBurgerNotActive}
+          >
+            Jamie&apos;s Blogs
+          </Link>
         </div>
       </div>
       <div className="navbar-item has-dropdown is-hoverable has-background-primary">

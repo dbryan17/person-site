@@ -55,9 +55,7 @@ const parseItalics = (rawText) => {
     if (typeof text !== "string") {
       return text;
     }
-    // if it is a string, parse links
     return text.split(regex).map((part, i) => {
-      // second element is link, third is display
       if (i % 2 === 1) {
         return <em key={idx}>{part}</em>;
       } else {
