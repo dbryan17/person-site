@@ -103,6 +103,10 @@ body {
   color: $highlight !important;
 }
 
+.dull-text {
+  color: rgba($text, 0.7);
+}
+
 .project-subtitle {
   color: rgba($text, 0.9);
 }

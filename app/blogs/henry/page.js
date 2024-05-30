@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { blogs } from "@/app/data/blogs/henryBlogs";
+import Disclaimer from "@/app/components/disclaimer/disclaimer";
 
 export default function HenryHome() {
   return (
@@ -36,7 +37,10 @@ export default function HenryHome() {
 
       <section className="page-chunk">
         <h1 className="title has-text-success is-size-3">The Junk Drawer</h1>
-        <h2 className="subtitle">Blogs about something</h2>
+        <div className="subtitle">
+          <p className="inner-page-chunk">Blogs about something</p>
+          <Disclaimer name="Henry Piedra" />
+        </div>
         <div>
           {Object.entries(blogs)
             .reverse()
