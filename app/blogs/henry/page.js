@@ -39,7 +39,7 @@ export default function HenryHome() {
         <h2 className="subtitle">Blogs about something</h2>
         <div>
           {Object.entries(blogs).map((kvPair) => (
-            <div className="inner-page-chunk">
+            <div className="inner-page-chunk" key={kvPair[0]}>
               <Link
                 className="blog-link is-size-5"
                 href={"./henry/" + kvPair[0]}
