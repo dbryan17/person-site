@@ -6,5 +6,5 @@ export default function BlogPage({ params }) {
   const blog = blogs[params.id];
 
   // title, author, date, content
-  return <Blog blog={blog} firstName="Jamie" />;
+  return <Blog blog={blog} firstName="Jamie" fullName="Jamie Cole" />;
 }

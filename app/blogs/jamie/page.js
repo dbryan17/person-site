@@ -44,7 +44,7 @@ export default function HenryHome() {
       <section className="page-chunk">
         <h1 className="title has-text-success is-size-3">Book Reviews</h1>
         <div className="subtitle">
-          <p className="inner-page-chunk"></p>
+          <div className="inner-page-chunk"></div>
           <Disclaimer name="Jamie Cole" />
         </div>
         <div>
