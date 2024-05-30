@@ -8,6 +8,22 @@ NOTE - tabbing down with `s causes \n
 NOTE - new lines just make spaces by default, so making my own
 */
 
+// Sudoku Graph Theory Web App November 2022 - December 2022
+// https://dbryan17.github.io/sudokuGraph/
+// • Investigated the graph representation of sudoku, and created a web application that generates valid
+// puzzles and allows the user to solve them in both grid and graph form.
+// • Implemented graph coloring algorithms to auto-solve the puzzle, complete with animations to illustrate
+// how they work.
+// • Developed many algorithms that represent human-solving strategies, allowing for an advanced help
+// feature which reveals solving methods to the user.
+// • Delivered a detailed report on the sudoku graph and the implementation of my application. Presented the
+// work via an oral presentation.
+// Mountain Project Climbing Database & Web Scraper
+const SudokuGraph = {
+  title: "Sudoku Graph Theory",
+  subtitle: "Web application to visualize, play, and solve sudoku graphs",
+};
+
 const FractalVoyager = {
   title: `Fractal Voyager`,
   subtitle: `CS Honors Thesis, advised by Kevin Angstadt`,
@@ -44,8 +60,7 @@ const FractalVoyager = {
       isFoldInFold: false,
       title: `Learn why Fractal Voyager is fast (WebAssembly)`,
       content: `
-      Fractal Voyager provides an innovative application of %%a{https://webassembly.org/[WebAssembly]} 
-      . A source-to-source compiler translates custom scripts to C++,
+      Fractal Voyager provides an innovative application of %%a{https://webassembly.org/[WebAssembly]}. A source-to-source compiler translates custom scripts to C++,
       which can generate an array representation of the complex plane
       with color values. This compiler is compiled to WebAssembly
       allowing scripts to be enetered and compiled on the web. Then, the
