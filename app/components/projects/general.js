@@ -38,7 +38,9 @@ export default function Project({ specs }) {
           </div>
         </h2>
         {parse(specs.content)}
-        {specs.folds.map((foldSpec, idx) => genFold(foldSpec, idx))}
+        {specs.folds
+          ? specs.folds.map((foldSpec, idx) => genFold(foldSpec, idx))
+          : ""}
       </section>
     </>
   );

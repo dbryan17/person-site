@@ -22,7 +22,53 @@ NOTE - new lines just make spaces by default, so making my own
 const SudokuGraph = {
   title: "Sudoku Graph Theory",
   subtitle: "Web application to visualize, play, and solve sudoku graphs",
+  buttons: [
+    {
+      link: "https://dbryan17.github.io/sudokuGraph/",
+      display: "Website",
+    },
+    {
+      link: "files/sudoku/paper.pdf",
+      display: "Paper",
+    },
+    {
+      link: "files/sudoku/presentation.pdf",
+      display: "Presentation",
+    },
+  ],
+  content: `
+  The web app allows users to solve sudoku puzzles in grid form or graph form. 
+  It features backtracking algorithms to create a valid grid based on a given number of digits,
+  and automatically solve (with animations) the puzzle with 
+  %%a{https://en.wikipedia.org/wiki/Graph_coloring[vertex graph colorings]}.
+  `,
+  folds: [
+    {
+      title: "Learn about the graph theory",
+      content: `
+      In the sudoku graph, vertices represent cells, and adjacent vertices (vertices with edges between them), 
+      cannot be the same "number". This "number" can be any symbol; in a typical sudoku they are numbers, 
+      in the sudoku graph they are colors. Any given cell cannot be the same number as any cell in the row 
+      (8 others), column (8 others), and block (4 unique others). This gives us that each vertex will have 20 edges (20 regular graph).
+      Furthermore, the graph has 81 total vertices, and thus, 810 total edges. %%n
+      Another unqiue structure of the sudoku graph is its cliques.
+      A clique is a complete subgraph, of which there a 27 with 9 vertices in the sudoku graph. Each block, row, and column is a 9-vertex-clqiue because no vertex in any one of those sets can be the same symbol as any other, giving us an edge between every vertex, thus a complete subgraph. 
+
+
+
+      `,
+    },
+    {
+      title: "See more app features",
+      content: `
+      `,
+    },
+  ],
 };
+
+// The purpose of this project
+// was to illustrate the strucutre of sudoku through graph theory, allowing users to gain a deeper understanding
+// of both sudoku puzzles and how graphs can be used to represent familiar structures.
 
 const FractalVoyager = {
   title: `Fractal Voyager`,
@@ -109,6 +155,6 @@ const FractalVoyager = {
   ],
 };
 
-const projects = [FractalVoyager];
+const projects = [FractalVoyager, SudokuGraph];
 
 export { projects };
