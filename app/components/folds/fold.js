@@ -13,7 +13,7 @@ export default function Fold({ foldContent, title, isInner }) {
           <a className="outline-link" onClick={() => setFoldOpen(false)}>
             Hide &uarr;
           </a>
-          <div className={isInner ? "" : "inner-page-chunk"}>{foldContent}</div>
+          <div className={isInner ? "" : ""}>{foldContent}</div>
         </>
       ) : (
         <>

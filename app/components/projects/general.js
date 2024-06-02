@@ -9,9 +9,9 @@ export default function Project({ specs }) {
         title={foldSpec.title}
         foldContent={
           <>
-            {parse(foldSpec.content, true)}
+            {parse(foldSpec.content, false)}
             {foldSpec.isFoldInFold
-              ? genFold(foldSpec.innerFold, idx + "inner", true)
+              ? genFold(foldSpec.innerFold, idx + "inner", false)
               : ""}
           </>
         }
