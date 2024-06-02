@@ -28,22 +28,27 @@ const SudokuGraph = {
       display: "Website",
     },
     {
-      link: "files/sudoku/paper.pdf",
-      display: "Paper",
+      link: "https://github.com/dbryan17/dbryan17.github.io/tree/main/sudokuGraph",
+      display: "Source Code",
     },
     {
       link: "files/sudoku/presentation.pdf",
       display: "Presentation",
     },
+    {
+      link: "files/sudoku/paper.pdf",
+      display: "Paper",
+    },
   ],
   content: `
-  The web app allows users to solve sudoku puzzles in grid form or graph form. 
+  The web app allows users to solve sudoku puzzles in grid or graph form. 
   It features backtracking algorithms to create a valid grid based on a given number of digits,
   and automatically solve (with animations) the puzzle with 
-  %%a{https://en.wikipedia.org/wiki/Graph_coloring[vertex graph colorings]}.
+  %%a{https://en.wikipedia.org/wiki/Graph_coloring[vertex graph coloring]}.
   `,
   folds: [
     {
+      isFoldInFold: true,
       title: "Learn about the graph theory",
       content: `
       In the sudoku graph, vertices represent cells, and adjacent vertices (vertices with edges between them), 
@@ -53,14 +58,29 @@ const SudokuGraph = {
       Furthermore, the graph has 81 total vertices, and thus, 810 total edges. %%n
       Another unqiue structure of the sudoku graph is its cliques.
       A clique is a complete subgraph, of which there a 27 with 9 vertices in the sudoku graph. Each block, row, and column is a 9-vertex-clqiue because no vertex in any one of those sets can be the same symbol as any other, giving us an edge between every vertex, thus a complete subgraph. 
-
-
-
       `,
+      innerFold: {
+        title: "Learn more about the graph colorings",
+        content: `
+        In the sudoku graph, when we represent the symbols assigned to vertices as colors, we can solve the sudoku with a graph vertex coloring. A valid solved sudoku is a valid coloring. 
+        A valid coloring is one in which the color of each vertex is unquie from the color of all vertices that it is adjacent to. 
+        So, all graph cliques have a exactly 9 colors. In terms of the grid, this means that each row, column, and block has unqiue numbers. %%n
+        In the application, two backtracking algorithms were implemented to 
+        complete the graph coloring of a sudoku. It is worth noting that a valid sudokou has exactly one 9-color solution. A different backtracking alogirthm to generate valid grids ensures this.
+  
+  
+  
+        `,
+      },
     },
+
     {
       title: "See more app features",
       content: `
+      Another app feature is the "help" button which aids users in solving the puzzle. Many human-solving strategies were implemented which slowly reveals the answer to a cell. 
+      First, a cell that can be solved with human-solving strategies is highlighted. Then, the cells that give the answer to that cell are highlighted. Finally, the answer is revealed. 
+      The solving strategies are ranked from easiest to hardest, so the easiest stratigies are shown first.
+
       `,
     },
   ],
