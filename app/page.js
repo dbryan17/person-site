@@ -5,8 +5,6 @@ import "./page.css";
 import RandImage from "./components/rand/randImage";
 import RandProjectCard from "./components/rand/randProject";
 
-import ProjectCard from "./components/projectCards/projectCard";
-
 export default function Home() {
   return (
     <div className="slim-container pageContNonHero">

@@ -1,6 +1,6 @@
 import Fold from "../folds/fold";
 import { parse } from "@/app/utils/parser/parser";
-export default function Project({ specs }) {
+export default function Project({ specs, includeImgs }) {
   const genFold = (foldSpec, idx, isInner) => {
     return (
       <Fold
@@ -41,6 +41,7 @@ export default function Project({ specs }) {
         {specs.folds
           ? specs.folds.map((foldSpec, idx) => genFold(foldSpec, idx))
           : ""}
+        {includeImgs ? " " : ""}
       </section>
     </>
   );
