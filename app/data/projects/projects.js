@@ -7,16 +7,26 @@
 NOTE - tabbing down with `s causes \n
 NOTE - new lines just make spaces by default, so making my own
 */
-// Mountain Project Climbing Database & Web Scraper November 2022 - December 2022
-// • Designed and provisioned a relational database to hold data from a social media driven rock climbing
-// guidebook.
-// • Created a web scraper that collected approximately ten percent of all the data on the guidebook
-// application, corresponding to over one million rows in one of the tables.
-// • Wrote complex SQL queries to gain insights on climbing communities and areas based on the data.
+
+const Venmo = {
+  title: "Automated Venmo Rent and Utilities Tool",
+  subtitle: "A small project someone may find useful",
+  buttons: [
+    {
+      link: "https://github.com/dbryan17/venmo-gmail-requests",
+      display: "Source Code",
+    },
+  ],
+  content: `
+  This tool has two functions: 1) automatically paying my rent via venmo every month, and 2) scrapping my emails for utilities charges and requesting my housemates for their share.
+  I built this because doing it manually was getting to be a pain, and I thought there must be a better way. %%n
+  *Code walkthrugh to come*
+  `,
+};
 
 const MtpDb = {
   title: "Mountain Project Climbing Web Scrapper & Database",
-  subtitle: "Databases Class Final Project",
+  subtitle: "Databases class final project",
   buttons: [
     {
       link: "https://github.com/dbryan17/mountainproject-scrapper-db/tree/main",
@@ -33,7 +43,7 @@ The database was used to write complex SQL queries to gain insights on climbing 
     {
       title: "See more about the queries",
       content: `
-      As a climber and a nerd, I've always had many unanswered questions about climbing that could be answered with the data held in the omnipresent 
+      As a nerdy climber, I've always had many unanswered questions about climbing that could be answered with the data held in the omnipresent 
       online guideboook and social media site mountain project. For example, what area has the most easy and safe climbs? Who is the biggest %%a{https://www.toprockclimbing.ca/blog/2019/5/7/why-does-sandbagging-occur#:~:text=Sandbag.,easier%20than%20the%20declared%20grade.[sandbagger]}? 
       What climbs to the OG climbers love? Of course, this would be very innacurate since not all routes and ascents are logged on mountain project, and I was only able to gather about 
       ten percent of the data on the website. I was virtually recreating the database for the site, and it took my macbook running for a week straight to gather that much data. %%n
@@ -203,6 +213,6 @@ const FractalVoyager = {
   imgs: ["/pictures/projects/fv1.png", "/pictures/projects/fv2.png"],
 };
 
-const projects = [FractalVoyager, SudokuGraph, MtpDb];
+const projects = [FractalVoyager, SudokuGraph, MtpDb, Venmo];
 
 export { projects };
