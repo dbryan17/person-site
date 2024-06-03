@@ -161,6 +161,17 @@ body {
   width: 100%;
 }
 
+.project-img-cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.project-img {
+  margin: 1rem;
+}
+
 .my-card {
   background-color: $cardcolor !important;
   // background-color: lighten($background, 4%);

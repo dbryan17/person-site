@@ -110,6 +110,7 @@ const SudokuGraph = {
       `,
     },
   ],
+  imgs: ["/pictures/projects/sudoku0.png", "/pictures/projects/sudoku1.png"],
 };
 
 // The purpose of this project
@@ -199,6 +200,7 @@ const FractalVoyager = {
       },
     },
   ],
+  imgs: ["/pictures/projects/fv1.png", "/pictures/projects/fv2.png"],
 };
 
 const projects = [FractalVoyager, SudokuGraph, MtpDb];

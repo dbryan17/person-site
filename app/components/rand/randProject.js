@@ -21,7 +21,7 @@ export default function RandProjectCard() {
 
   return (
     <div>
-      <Project specs={randProject} />
+      <Project specs={randProject} includeImgs={true} />
     </div>
   );
 }

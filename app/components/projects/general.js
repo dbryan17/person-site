@@ -1,5 +1,6 @@
 import Fold from "../folds/fold";
 import { parse } from "@/app/utils/parser/parser";
+import Image from "next/image";
 export default function Project({ specs, includeImgs }) {
   const genFold = (foldSpec, idx, isInner) => {
     return (
@@ -41,7 +42,22 @@ export default function Project({ specs, includeImgs }) {
         {specs.folds
           ? specs.folds.map((foldSpec, idx) => genFold(foldSpec, idx))
           : ""}
-        {includeImgs ? " " : ""}
+        {includeImgs && specs.imgs ? (
+          <div className="project-img-cont">
+            {specs.imgs.map((src) => (
+              <Image
+                className="project-img"
+                src={src}
+                key={src}
+                width={200}
+                height={200}
+                alt="project image"
+              />
+            ))}
+          </div>
+        ) : (
+          ""
+        )}
       </section>
     </>
   );
