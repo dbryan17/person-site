@@ -19,7 +19,7 @@ export default function Home() {
               Hello, I&apos;m Dakota
             </h1>
             <div className="inner-page-chunk">
-              An icoming PhD student at CU Boulder in the{" "}
+              An icoming CS PhD student at CU Boulder in the{" "}
               <a href="https://plv.colorado.edu/" target="_blank">
                 CUPLV Group
               </a>
@@ -32,8 +32,8 @@ export default function Home() {
             </div>
 
             <div className="inner-page-chunk">
-              I enjoy building fun things for the interent that I find
-              entertaining. Check them out in my{" "}
+              I enjoy research and development related to programming languages,
+              web tools, and anything I find interesting. Check out my{" "}
               <a href="./projects">projects</a>.
             </div>
             <div>
