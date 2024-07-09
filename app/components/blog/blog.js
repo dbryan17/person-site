@@ -2,13 +2,18 @@ import Link from "next/link";
 import { parse } from "@/app/utils/parser/parser";
 import Disclaimer from "../disclaimer/disclaimer";
 
-export default function Blog({ blog, firstName, fullName }) {
+export default function Blog({ blog, firstName, fullName, hasNoDisclaimer }) {
   if (!blog || !blog.content) {
     return (
       <div className="slim-container pageContainer">
         <h2>
           That&apos;s not right,{" "}
-          <Link href={"/blogs/" + firstName.toLowerCase()}>
+          <Link
+            href={
+              "/blogs/" +
+              (firstName === "Dakota" ? "" : firstName.toLowerCase())
+            }
+          >
             return to {firstName}&apos;s home page
           </Link>
           ?
@@ -27,9 +32,14 @@ export default function Blog({ blog, firstName, fullName }) {
             </div>
             <div className="subtitle">
               {parse(blog.date, true)}
-              <p className="inner-page-chunk"> </p>
-
-              <Disclaimer name={fullName} isNotPlural={true} />
+              {hasNoDisclaimer ? (
+                ""
+              ) : (
+                <>
+                  <p className="inner-page-chunk"> </p>
+                  <Disclaimer name={fullName} isNotPlural={true} />
+                </>
+              )}
             </div>
           </div>
         </section>

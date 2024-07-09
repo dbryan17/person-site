@@ -11,10 +11,6 @@ export default function Home() {
     <>
       <Head>
         <title>Dakota Bryan</title>
-        <meta
-          name="description"
-          description="Dakota Bryan Cody Bryan CU Boulder CS PhD Blogs Trip Reports Climbing"
-        ></meta>
       </Head>
       <div className="slim-container pageContNonHero">
         <div className="page-chunk">
