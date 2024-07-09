@@ -10,6 +10,7 @@
 turns \ns to array of divs with inner-page-chunk className
 */
 import StravaEmbed from "@/app/components/blog/stravaEmbed";
+import Image from "next/image";
 const parse = (rawText, hasNoClassName) => {
   return rawText.split("%%n").map((content, idx) => (
     <div key={idx} className={hasNoClassName ? "" : "inner-page-chunk"}>
@@ -65,12 +66,24 @@ const parseTokens = (tokens) => {
           <a href={url} key={idx} target="_blank" rel="noopener noreferrer">
             {display.slice(0, -1)}
           </a>
-        ); // -1 to remove trailing ']'
+        ); // -1 to remove ]
       case "s":
         return <StravaEmbed id={token.content} key={token.content} />;
-      case "img":
-        const [alt, src] = token.content.split("[");
-        return <img src={src.slice(0, -1)} alt={alt} key={idx} />; // -1 to remove trailing ']'
+      case "p":
+        let [src, caption] = token.content.split("[");
+        caption = caption.slice(0, -1);
+        return (
+          <div className="imgCaptionCont" key={src}>
+            <Image
+              src={src}
+              alt={caption}
+              width={400}
+              height={400}
+              key={src + "0"}
+            />
+            <div key={src + "1"}>{caption}</div>
+          </div>
+        );
       case "text":
         return token.content;
       default:

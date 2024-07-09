@@ -15,12 +15,13 @@ export default function StravaEmbed({ id }) {
 
   return (
     <>
-      <div className="stravaCont">
+      <div className="stravaCont" key={id}>
         <div
-          class="strava-embed-placeholder"
+          className="strava-embed-placeholder"
           data-embed-type="activity"
           data-embed-id={id}
           data-style="standard"
+          key={id + "0"}
         ></div>
       </div>
       {/* <script src="https://strava-embeds.com/embed.js"></script> */}
