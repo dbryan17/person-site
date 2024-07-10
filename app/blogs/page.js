@@ -22,7 +22,7 @@ export default function BlogsHome() {
                 <Link
                   className="blog-link is-size-5"
                   // I shouldn't have to add blogs here, should be realt9ive, works for henrys and jamies, weird, TODO fix
-                  href={"./blogs/" + kvPair[0]}
+                  href={"/blogs/tripReports/" + kvPair[0]}
                 >
                   {kvPair[1].title}
                 </Link>

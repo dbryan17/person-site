@@ -68,7 +68,16 @@ const parseTokens = (tokens) => {
           </a>
         ); // -1 to remove ]
       case "s":
-        return <StravaEmbed id={token.content} key={token.content} />;
+        // let [id, stravaCaption] = token.content.split("[");
+        // stravaCaption = stravaCaption.slice(0, -1);
+        let id = token.content;
+
+        return (
+          // <div className="imgCaptionCont" key={id + "0"}>
+          <StravaEmbed id={id} key={id} />
+          /* <div>{stravaCaption}</div>
+          </div> */
+        );
       case "p":
         let [src, caption] = token.content.split("[");
         caption = caption.slice(0, -1);
@@ -77,8 +86,8 @@ const parseTokens = (tokens) => {
             <Image
               src={src}
               alt={caption}
-              width={400}
-              height={400}
+              width={500}
+              height={500}
               key={src + "0"}
             />
             <div key={src + "1"}>{caption}</div>
