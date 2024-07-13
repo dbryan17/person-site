@@ -1,10 +1,10 @@
-"use client";
 import "./styles.scss";
 import "./page.css";
 
 import RandImage from "./components/rand/randImage";
 import RandProjectCard from "./components/rand/randProject";
 import Head from "next/head";
+import RandBlogCard from "./components/rand/randBlog";
 
 export default function Home() {
   return (
@@ -66,6 +66,7 @@ export default function Home() {
         <div className="page-chunk">
           <h1 className="title has-text-success is-size-3">Featured Blog</h1>
           <h2 className="subtitle">Also random</h2>
+          <RandBlogCard />
         </div>
       </div>
     </>

@@ -6,6 +6,8 @@ const imgLocations = [
   "/pictures/me/one.JPG",
   "/pictures/me/two.JPG",
   "/pictures/me/three.jpeg",
+  "/pictures/me/four.jpeg",
+  "/pictures/me/five.jpeg",
 ];
 
 export default function RandImage() {
@@ -13,7 +15,6 @@ export default function RandImage() {
 
   useEffect(() => {
     let rand = Math.floor(Math.random() * imgLocations.length);
-    console.log(rand);
 
     setCurrentImage(imgLocations[rand]);
   }, []);
