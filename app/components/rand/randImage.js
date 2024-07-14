@@ -6,7 +6,7 @@ const imgLocations = [
   "/pictures/me/one.JPG",
   "/pictures/me/two.JPG",
   "/pictures/me/three.jpeg",
-  "/pictures/me/four.jpeg",
+  "/pictures/me/four.JPEG",
   "/pictures/me/five.jpeg",
 ];
 
