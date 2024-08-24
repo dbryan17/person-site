@@ -12,10 +12,10 @@ export default function Projects() {
             </p>
           </div>
         </section>
+        {projects.map((project) => (
+          <Project specs={project} key={project.title} />
+        ))}
       </section>
-      {projects.map((project) => (
-        <Project specs={project} key={project.title} />
-      ))}
     </div>
   );
 }

@@ -24,6 +24,59 @@ const Venmo = {
   `,
 };
 
+const Crosswords = {
+  title: "Crossword Generator Web App",
+  subtitle: "Small project to assist in crossword creatation",
+  buttons: [
+    {
+      link: "https://github.com/dbryan17/crossword-react",
+      display: "Source Code",
+    },
+  ],
+  content: `
+  Given a partially filled or empty crossword grid, an algorithm uses a dictionary of words to generate a valid crossword if one is possible. The backtracking algorithm uses an ordered trie data structure to generate the grid.
+  In addition to the algorithm, I wrote a web app that allows users to create their own partially filled grid using NYT style grid navigation and upload their own words to be included in the dictionary.%%n
+  I abonded this project before adding a large dictionary becuase I found a great tool already out there: %%a{https://crosshare.org/[Crosshare]}.
+  `,
+};
+
+const juliaSetThreeD = {
+  title: "3D Julia Set Transformations - In Progress",
+  subtitle: "An extenstion onto Fractal Voyager",
+  buttons: [
+    {
+      link: "https://github.com/FractalVoyager/threeD",
+      display: "Source Code",
+    },
+    {
+      link: "files/threeD/example.stl",
+      display: "Example Generated .stl File",
+    },
+  ],
+  content: `The purpose of this project is to create 3D shapes from julia set transformations. On Fractal
+  Voyager, a user will draw a line across a paramter plane fractal. Then, the code will run and it will produce an
+  stl file which is made up of julia sets (dynamical plane fractals) along that line in 3D space. This will be a solid shape.
+  `,
+  folds: [
+    {
+      title: "Learn more about steps to generate the shapes",
+      content: `
+      First, Fractal Voyager must generate many dynamical plane fractals along the line. Each fractal is converted to a black and white image where black pixels are in the set. Then, this is converted to a binary that representes if each pixel is black or white, which is passed to a seperate program (for now).%%n
+      Each fractal image must be converted to a polygon and triangulated. I created an outliner algorithm that captures ordered points which represent the outline of the fractal shape.
+      This algorithm handles parts of the shape that are only one pixel long and tails off of the shape by splitting points to be smaller than the pixel size. Once we have the list of ordered points which represent a polygon, this is triangulated with the %%a{https://www.geometrictools.com/Documentation/TriangulationByEarClipping.pdf[ear clip]} method.%%n
+      This triangulated shapes represent the cross sections of the 3D shape. Now, we must create the exterior sides of the shape. I developed an algorithm which uses the ordered points to create triangles that represent the sides between two cross sections.
+      Ensuring that no lines cross in 3D space is particularly tricky, and we are still handling more complex cases.%%n
+      Once we do the above for each cross section, we have a list of triangles that represent the 3D shape. This is passed to a function which generates an stl file for all the trinagles.
+      `,
+    },
+  ],
+  imgs: [
+    "/pictures/projects/threeD0.png",
+    "/pictures/projects/threeD1.png",
+    "/pictures/projects/threeD2.png",
+  ],
+};
+
 const MtpDb = {
   title: "Mountain Project Climbing Web Scrapper & Database",
   subtitle: "Databases class final project",
@@ -213,6 +266,13 @@ const FractalVoyager = {
   imgs: ["/pictures/projects/fv1.png", "/pictures/projects/fv2.png"],
 };
 
-const projects = [FractalVoyager, SudokuGraph, MtpDb, Venmo];
+const projects = [
+  FractalVoyager,
+  SudokuGraph,
+  juliaSetThreeD,
+  MtpDb,
+  Crosswords,
+  Venmo,
+];
 
 export { projects };
