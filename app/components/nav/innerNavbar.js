@@ -15,7 +15,7 @@ export default function InnerNavBar({ setBurgerNotActive }) {
 
   return (
     <>
-      <Link
+      {/* <Link
         href="/about"
         className={
           "navbar-item has-background-primary" +
@@ -24,7 +24,7 @@ export default function InnerNavBar({ setBurgerNotActive }) {
         onClick={setBurgerNotActive}
       >
         About
-      </Link>
+      </Link> */}
       <Link
         href="/projects"
         className={
@@ -54,7 +54,7 @@ export default function InnerNavBar({ setBurgerNotActive }) {
         >
           Blogs
         </Link>
-        <div className="navbar-dropdown has-background-primary">
+        {/* <div className="navbar-dropdown has-background-primary">
           <Link
             href="/blogs/henry"
             className={
@@ -75,9 +75,9 @@ export default function InnerNavBar({ setBurgerNotActive }) {
           >
             Jamie&apos;s Blogs
           </Link>
-        </div>
+        </div> */}
       </div>
-      <div className="navbar-item has-dropdown is-hoverable has-background-primary">
+      {/* <div className="navbar-item has-dropdown is-hoverable has-background-primary">
         <Link
           className={
             "navbar-link has-background-primary is-arrowless" +
@@ -100,7 +100,7 @@ export default function InnerNavBar({ setBurgerNotActive }) {
             Counter
           </Link>
         </div>
-      </div>
+      </div> */}
       <Link
         href="/cv"
         className={

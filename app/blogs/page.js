@@ -11,7 +11,7 @@ export default function BlogsHome() {
             I find reading about the experiences of others on various climbs,
             rides, hikes, and other activities both useful and entertaining
             before attempting them myself. Therefore, I decided to write up some
-            of my experiences in the hopes someone can gain insight from them.{" "}
+            of my experiences in the hope someone can gain insight from them.{" "}
           </p>
         </div>
         <div>

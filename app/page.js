@@ -24,28 +24,27 @@ export default function Home() {
                 Hello, I&apos;m Dakota
               </h1>
               <div className="inner-page-chunk">
-                An icoming CS PhD student at CU Boulder in the{" "}
+                A CS PhD student at CU Boulder in the{" "}
                 <a href="https://plv.colorado.edu/" target="_blank">
                   CUPLV Group
                 </a>
                 .
                 <div>
-                  <a className="outline-link" href="./about">
+                  {/* <a className="outline-link" href="./about"> */}
+                  <a className="outline-link" href="./">
                     See more about me &#8594;
                   </a>
                 </div>
               </div>
-
-              <div className="inner-page-chunk">
-                I enjoy research and development related to programming
-                languages, web tools, and anything I find interesting. Check out
-                my <a href="./projects">projects</a>.
-              </div>
-              <div>
+              {/* <div className="inner-page-chunk"> */}I enjoy research and
+              development related to programming languages, web tools, and
+              anything I find interesting. Check out my{" "}
+              <a href="./projects">projects</a>.{/* </div> */}
+              {/* <div>
                 I built this site as a place to share my projects, a little
                 about me, and somewhere myself and others can share ideas and
                 stories.{" "}
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="inner-page-chunk">
